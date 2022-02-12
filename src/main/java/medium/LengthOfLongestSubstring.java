@@ -1,5 +1,7 @@
 package medium;
 
+import java.util.Arrays;
+
 public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
@@ -23,18 +25,20 @@ public class LengthOfLongestSubstring {
 
     }
 
-    private int lastTimeOffset = 0;
+    private void debug(char[] source) {
+        System.out.println(Arrays.toString(source));
+    }
 
-    private int findSameCharIndexWithRecord(char[] source, char target) {
-        for (int result = lastTimeOffset; result < source.length; result++) {
-            lastTimeOffset++;
+    private int findSameCharIndexWithRecord(char[] source, char target, int recode) {
+        for (int result = recode; result < source.length; result++) {
+            recode++;
             char c = source[result];
             if (c == target) {
                 break;
             }
         }
 
-        return lastTimeOffset;
+        return recode;
     }
 
     private int findSameCharIndex(char[] source, char target) {
@@ -50,10 +54,6 @@ public class LengthOfLongestSubstring {
     }
 
     private void setAndClearArray(char[] originalArray, char[] setArray, int oStart, int setArrayOffset) {
-        if(originalArray.length != setArray.length) {
-            throw new RuntimeException();
-        }
-
         int copyTimes = 0;
 
         for (int i = oStart + 1, length = setArray.length; i < length; i++) {
@@ -85,28 +85,30 @@ public class LengthOfLongestSubstring {
         return result;
     }
 
-    private int fixCharArray(char[] sourceArray, char[] cacheArray, char value) {
-        int len = getNonZeroLen(cacheArray);
-
+    private int fixCharArray(char[] sourceArray, char[] cacheArray, char value, int lastTimeOffset, int dataIndex) {
         for (char c : cacheArray) {
             if (c == '\u0000') {
                 break;
             }
 
             if (c == value) {
-                int start = findSameCharIndexWithRecord(sourceArray, c);
+                lastTimeOffset = findSameCharIndexWithRecord(sourceArray, c, lastTimeOffset);
 
-                setAndClearArray(sourceArray, cacheArray, start - 1, findSameCharIndex(cacheArray, value));
+                setAndClearArray(sourceArray, cacheArray, lastTimeOffset - 1, findSameCharIndex(cacheArray, value));
 
                 cacheArray[getNonZeroLen(cacheArray)] = value;
 
-                return len;
+//                debug(cacheArray);
+
+                return lastTimeOffset;
             }
         }
 
-        cacheArray[len] = value;
+        cacheArray[dataIndex] = value;
 
-        return len;
+//        debug(cacheArray);
+
+        return lastTimeOffset;
     }
 
     public int lengthOfLongestSubstring(String s) {
@@ -115,19 +117,21 @@ public class LengthOfLongestSubstring {
         char[] chars = s.toCharArray();
         char[] cache = new char[chars.length];
 
+        int lastTimeOffset = 0;
+
         while(index < chars.length) {
 
-            int oldLen = fixCharArray(chars, cache, chars[index]);
+            int cacheIndex = getNonZeroLen(cache);
 
-            int temp = Math.max(oldLen, getNonZeroLen(cache));
+            lastTimeOffset = fixCharArray(chars, cache, chars[index], lastTimeOffset, cacheIndex);
+
+            int temp = Math.max(cacheIndex, getNonZeroLen(cache));
             if(longest < temp) {
                 longest = temp;
             }
 
             index++;
         }
-
-        lastTimeOffset = 0;
 
         return longest;
     }
