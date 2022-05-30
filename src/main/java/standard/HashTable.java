@@ -10,10 +10,10 @@ public class HashTable<K, V> {
         classStudent.put("Wind", 6);
         classStudent.put("Jasper", 7);
 
-        System.out.println(classStudent.get("Alien"));
-        System.out.println(classStudent.get("Pan"));
-        System.out.println(classStudent.get("Wind"));
-        System.out.println(classStudent.get("Jasper"));
+        System.out.println("Alien age: " + classStudent.get("Alien"));
+        System.out.println("Pan age: " + classStudent.get("Pan"));
+        System.out.println("Wind age: " + classStudent.get("Wind"));
+        System.out.println("Jasper age: " + classStudent.get("Jasper"));
     }
 
     private static final class Node<K, V> {
