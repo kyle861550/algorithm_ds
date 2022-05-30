@@ -68,9 +68,9 @@ public class HashTable<K, V> {
             return null;
         }
 
-        V value;
+        V value = null;
 
-        while (true) {
+        while (node != null) {
             if(node.key == key) {
                 value = node.value;
                 break;
