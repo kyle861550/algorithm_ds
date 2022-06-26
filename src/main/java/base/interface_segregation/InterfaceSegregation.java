@@ -32,7 +32,7 @@ public class InterfaceSegregation {
         }
     }
 
-    static final class CloseUtils {
+    public static final class CloseUtils {
         public static void close(Closeable closeable) {
             if (closeable != null) {
                 try {
