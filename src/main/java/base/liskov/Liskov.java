@@ -3,8 +3,6 @@ package base.liskov;
 public class Liskov {
 
     static class Window {
-
-        // View 為抽象
         public void show(View child) {
             child.onDraw();
         }
