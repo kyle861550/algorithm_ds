@@ -1,9 +1,8 @@
 package oop.builder.simple_builder;
 
 public class Asus implements ComputerBuilder<Computer> {
-
     private String board = "技嘉", cpu = "AMD";
-    private int power = 500, memory = 8, size = 24;
+    private int power = 500, memory = 8;
 
 
     @Override
@@ -31,9 +30,23 @@ public class Asus implements ComputerBuilder<Computer> {
     }
 
     @Override
-    public ComputerBuilder<Computer> setScreenSize(int size) {
-        this.size = size;
-        return this;
+    public String getBoard() {
+        return board;
+    }
+
+    @Override
+    public String getCpu() {
+        return cpu;
+    }
+
+    @Override
+    public int getPower() {
+        return power;
+    }
+
+    @Override
+    public int getMemory() {
+        return memory;
     }
 
     @Override
@@ -46,7 +59,8 @@ public class Asus implements ComputerBuilder<Computer> {
             memory = 8;
         }
 
-        return new Computer(board, cpu, power, memory, size);
+        return new Computer(board, cpu, power, memory);
     }
+
 
 }

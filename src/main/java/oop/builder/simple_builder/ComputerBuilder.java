@@ -6,7 +6,11 @@ interface ComputerBuilder<T extends Computer> {
     ComputerBuilder<T> setCPU(String cpu);
     ComputerBuilder<T> setPower(int power);
     ComputerBuilder<T> setMemory(int memory);
-    ComputerBuilder<T> setScreenSize(int size);
+
+    String getBoard();
+    String getCpu();
+    int getPower();
+    int getMemory();
 
     T create();
 
