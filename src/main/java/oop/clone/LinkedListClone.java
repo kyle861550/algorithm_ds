@@ -43,10 +43,9 @@ public class LinkedListClone implements Cloneable {
     public void print() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
-        System.out.println("List: " + event.hashCode());
 
         for(String m: event) {
-            System.out.print(m + "... ");
+            System.out.print(m + ", hashcode: " + m.hashCode() + "\n");
         }
         System.out.println();
     }
@@ -59,12 +58,15 @@ class LinkedListMain {
         LinkedListClone i = new LinkedListClone();
         i.setName("Pan");
         i.setAge(13);
-        i.setEvent("Hello", "World", "YoYo");
+        i.setEvent("Hello", "World");
         i.print();
 
         LinkedListClone ii = i.clone();
         ii.setAge(16);
-        ii.setEvent("Test", "1234", "7788", "print");
+        ii.setEvent("Test", "1234");
         ii.print();
+
+        System.out.println("---------------------------------------------");
+        i.print();
     }
 }
