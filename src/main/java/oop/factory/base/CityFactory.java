@@ -1,4 +1,4 @@
-package oop.factory;
+package oop.factory.base;
 
 public class CityFactory implements ICity {
     @Override

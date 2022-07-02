@@ -1,4 +1,4 @@
-package oop.factory.base;
+package oop.factory.reflect;
 
 public interface ITravelInfo {
 

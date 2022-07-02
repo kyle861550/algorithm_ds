@@ -1,17 +1,18 @@
-package oop.factory.base;
+package oop.factory.reflect;
+
+import java.lang.reflect.Constructor;
 
 public class CityFactory implements ICity {
-    @Override
-    public ITravelInfo getTaiwan() {
-        TravelInfoImpl travelInfo = new TravelInfoImpl("Taiwan", true);
-        travelInfo.places.add("taipei");
-        return travelInfo;
-    }
 
     @Override
-    public ITravelInfo getJapan() {
-        TravelInfoImpl travelInfo = new TravelInfoImpl("Japan", false);
-        travelInfo.places.add("tokyo");
-        return travelInfo;
+    public ITravelInfo getTravel(Class<? extends ITravelInfo> clz) {
+        try {
+            Constructor<? extends ITravelInfo> constructor = clz.getConstructor();
+
+            return constructor.newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }

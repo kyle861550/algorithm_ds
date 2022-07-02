@@ -1,14 +1,14 @@
-package oop.factory.base;
+package oop.factory.reflect;
 
 public class FactoryMain {
 
     public static void main(String[] args) {
         ICity iCity = new CityFactory();
 
-        ITravelInfo taiwan = iCity.getTaiwan();
+        ITravelInfo taiwan = iCity.getTravel(TaiwanTravelInfo.class);
         print(taiwan);
 
-        ITravelInfo japan = iCity.getJapan();
+        ITravelInfo japan = iCity.getTravel(JapanTravelInfo.class);
         print(japan);
     }
 

@@ -1,4 +1,4 @@
-package oop.factory;
+package oop.factory.base;
 
 import java.util.ArrayList;
 import java.util.List;

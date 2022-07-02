@@ -3,15 +3,16 @@ package oop.factory.reflect;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JapanTravelInfo implements ITravelInfo {
+public class TaiwanTravelInfo implements ITravelInfo {
 
     public String name;
     public boolean chineseLang;
     public List<String> places = new ArrayList<>();
 
-    public JapanTravelInfo(String name) {
-        this.name = name;
-        this.chineseLang = false;
+    public TaiwanTravelInfo() {
+        this.name = "Taiwan";
+        this.chineseLang = true;
+        places.add("Taipei");
     }
 
     @Override

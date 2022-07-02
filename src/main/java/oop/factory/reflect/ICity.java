@@ -2,7 +2,6 @@ package oop.factory.reflect;
 
 public interface ICity {
 
-    ITravelInfo getTaiwan();
+    ITravelInfo getTravel(Class<? extends ITravelInfo> clz);
 
-    ITravelInfo getJapan();
 }
