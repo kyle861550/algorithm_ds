@@ -1,6 +1,4 @@
-package medium;
-
-import java.util.Arrays;
+package impl.medium;
 
 public class AddTwoNumber {
 
