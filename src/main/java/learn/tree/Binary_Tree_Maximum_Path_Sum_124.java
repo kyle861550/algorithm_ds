@@ -10,11 +10,11 @@ public class Binary_Tree_Maximum_Path_Sum_124 {
         }
     }
 
-    int res = Integer.MIN_VALUE;
+    int ans = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
         oneSideMax(root);
-        return res;
+        return ans;
     }
 
     private int oneSideMax(TreeNode root) {
@@ -26,7 +26,7 @@ public class Binary_Tree_Maximum_Path_Sum_124 {
 
         int rightValue = Math.max(0, oneSideMax(root.right));
 
-        res = Math.max(res, leftValue + rightValue + root.val);
+        ans = Math.max(ans, leftValue + rightValue + root.val);
 
         return Math.max(leftValue, rightValue) + root.val;
     }
