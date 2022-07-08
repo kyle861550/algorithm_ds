@@ -1,10 +1,8 @@
-package oop.factory_abstract;
+package oop.factory_abstract.reflect;
 
 public class StartUART implements IComm.IStart {
-
     @Override
     public String getStartCode() {
-        return "UUU_AAA_RRR_TTT";
+        return "UUU--AAA---RRR---TTT";
     }
-
 }

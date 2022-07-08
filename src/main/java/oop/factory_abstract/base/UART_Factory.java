@@ -1,4 +1,4 @@
-package oop.factory_abstract;
+package oop.factory_abstract.base;
 
 public class UART_Factory implements IFactory {
 

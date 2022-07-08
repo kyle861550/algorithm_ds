@@ -1,6 +1,6 @@
-package oop.factory_abstract;
+package oop.factory_abstract.base;
 
-public class MIX_Factory implements IFactory {
+public class SPI_Factory implements IFactory {
 
     @Override
     public IComm.ICreate create() {
@@ -9,6 +9,6 @@ public class MIX_Factory implements IFactory {
 
     @Override
     public IComm.IStart getStartCode() {
-        return new StartUART();
+        return new StartSPI();
     }
 }

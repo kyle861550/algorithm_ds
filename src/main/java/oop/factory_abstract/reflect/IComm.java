@@ -1,4 +1,4 @@
-package oop.factory_abstract;
+package oop.factory_abstract.reflect;
 
 public interface IComm {
 
@@ -9,4 +9,5 @@ public interface IComm {
     interface IStart {
         String getStartCode();
     }
+
 }
