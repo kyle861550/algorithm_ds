@@ -2,7 +2,7 @@ package learn.dynamic;
 
 import java.util.HashMap;
 
-public class CancelChildRepeat {
+public class Memo {
 
     int step = 0;
     private int fibonacciArray(int value) {
@@ -59,7 +59,7 @@ public class CancelChildRepeat {
     }
 
     public static void main(String[] args) {
-        CancelChildRepeat repeat = new CancelChildRepeat();
+        Memo repeat = new Memo();
 
 //        System.out.println("fibonacciArray: " + repeat.fibonacciArray(10));
 
