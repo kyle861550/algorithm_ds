@@ -1,4 +1,4 @@
-package oop.Stragety.advance;
+package oop.stragety.base;
 
 public class Agency implements TravelCast {
     @Override

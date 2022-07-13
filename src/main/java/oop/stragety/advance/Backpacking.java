@@ -1,4 +1,4 @@
-package oop.Stragety.base;
+package oop.stragety.advance;
 
 public class Backpacking implements TravelCast {
     @Override

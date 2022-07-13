@@ -1,4 +1,4 @@
-package oop.Stragety;
+package oop.stragety;
 
 public class TravelCal {
 

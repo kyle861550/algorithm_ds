@@ -1,4 +1,4 @@
-package oop.Stragety.base;
+package oop.stragety.base;
 
 public class TestStrategy {
 

@@ -1,4 +1,4 @@
-package oop.Stragety.advance;
+package oop.stragety.base;
 
 public class SelfHelp implements TravelCast {
     @Override
