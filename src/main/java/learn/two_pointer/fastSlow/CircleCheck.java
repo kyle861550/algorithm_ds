@@ -1,4 +1,4 @@
-package learn.fastSlow;
+package learn.two_pointer.fastSlow;
 
 public class CircleCheck {
 
