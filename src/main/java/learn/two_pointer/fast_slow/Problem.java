@@ -1,4 +1,4 @@
-package learn.two_pointer.fastSlow;
+package learn.two_pointer.fast_slow;
 
 public class Problem {
 
