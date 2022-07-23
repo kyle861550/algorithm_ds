@@ -1,6 +1,6 @@
 package learn.two_pointer.left_right;
 
-public class Boundary {
+public class BoundaryLeft {
 
     public int LeftBoundary(int[] numbers, int target) {
         if(numbers.length == 0) {
