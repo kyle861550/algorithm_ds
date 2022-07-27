@@ -8,7 +8,7 @@ public class Shanks implements Request {
 
     @Override
     public String projectName() {
-        return "航海王";
+        return "Comics";
     }
 
     @Override

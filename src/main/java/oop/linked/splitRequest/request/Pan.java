@@ -8,7 +8,7 @@ public class Pan implements Request {
 
     @Override
     public String projectName() {
-        return "潘朵拉";
+        return "Pandora";
     }
 
     @Override

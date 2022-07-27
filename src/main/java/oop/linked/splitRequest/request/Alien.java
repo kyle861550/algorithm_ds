@@ -8,7 +8,7 @@ public class Alien implements Request {
 
     @Override
     public String projectName() {
-        return "天體運動";
+        return "Sky";
     }
 
     @Override
