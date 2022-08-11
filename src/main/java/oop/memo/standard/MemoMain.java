@@ -1,4 +1,4 @@
-package oop.memo;
+package oop.memo.standard;
 
 public class MemoMain {
 

@@ -1,4 +1,4 @@
-package oop.memo;
+package oop.memo.standard;
 
 import java.util.HashMap;
 import java.util.Map;
