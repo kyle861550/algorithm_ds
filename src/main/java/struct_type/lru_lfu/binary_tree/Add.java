@@ -1,6 +1,6 @@
 package struct_type.lru_lfu.binary_tree;
 
-public class BaseControl {
+public class Add {
 
     public void addEveryNode(TreeNode root) {
         // base case
@@ -17,9 +17,9 @@ public class BaseControl {
     }
 
     public static void main(String[] args) {
-        BaseControl baseControl = new BaseControl();
+        Add add = new Add();
 
-        baseControl.addEveryNode(TreeNode.getBaseTreeNode());
+        add.addEveryNode(TreeNode.getBaseTreeNode());
     }
 
 }

@@ -1,6 +1,6 @@
 package struct_type.lru_lfu.binary_tree;
 
-public class CheckValid {
+public class IsValid {
 
 
     boolean isValidTree_Problem(TreeNode root) {
@@ -43,7 +43,7 @@ public class CheckValid {
 
 
     public static void main(String[] args) {
-        CheckValid checkValid = new CheckValid();
+        IsValid isValid = new IsValid();
 
         TreeNode sub = new TreeNode(15, new TreeNode(9), new TreeNode(20));
         TreeNode treeNode = new TreeNode(10, new TreeNode(2), sub);
@@ -54,11 +54,11 @@ public class CheckValid {
 
         // -----------------------------------------------------------------------------------
 
-        boolean result2 = checkValid.isValidTree(treeNode, null, null);
+        boolean result2 = isValid.isValidTree(treeNode, null, null);
         System.out.println("Is valid result with 9: " + result2);
 
         sub.left = new TreeNode(11);
-        boolean result3 = checkValid.isValidTree(treeNode, null, null);
+        boolean result3 = isValid.isValidTree(treeNode, null, null);
         System.out.println("Is valid result with 13: " + result3);
     }
 }
