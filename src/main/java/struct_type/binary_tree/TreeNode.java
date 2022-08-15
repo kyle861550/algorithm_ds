@@ -1,9 +1,9 @@
-package struct_type.lru_lfu.binary_tree;
+package struct_type.binary_tree;
 
 public class TreeNode {
 
-    TreeNode left, right;
-    int val;
+    public TreeNode left, right;
+    public int val;
 
     public TreeNode(int val) {
         this.val = val;

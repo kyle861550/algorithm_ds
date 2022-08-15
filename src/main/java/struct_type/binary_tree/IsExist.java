@@ -1,4 +1,4 @@
-package struct_type.lru_lfu.binary_tree;
+package struct_type.binary_tree;
 
 public class IsExist {
 
