@@ -43,4 +43,66 @@ public class BinarySearch {
         return -1;
     }
 
+    public int binarySearch_2(int numbers[], int target) {
+        int left = 0;
+        int right = numbers.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if(numbers[mid] == target) {
+                return mid;
+
+            } else if(numbers[mid] > target) {
+                right = mid - 1;
+
+            } else if(numbers[mid] < target) {
+                left = mid + 1;
+            }
+
+        }
+
+        System.out.println("Left: " + left + ", right: " + right);
+
+        return -(numbers.length - left);
+    }
+
+    public int binarySearch_3(int numbers[], int target) {
+        int left = 0;
+        int right = numbers.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            int diff = numbers[mid] - target;
+
+            if(diff == 0) {
+                return mid;
+
+            } else if(diff > 0) {
+                right = mid - 1;
+
+            } else if(diff < 0) {
+                left = mid + 1;
+            }
+
+        }
+
+        System.out.println("Left: " + left + ", right: " + right);
+
+        return -(numbers.length - left);
+    }
+    public static void main(String[] args) {
+        int[] numbers = new int[] {3, 14, 15, 19, 26, 53, 58};
+
+//        System.out.println("Find 53 index: "
+//                + new BinarySearch().binarySearch(numbers, 53));
+
+//        System.out.println("Find 47 index: "
+//                + new BinarySearch().binarySearch_2(numbers, 47));
+
+        System.out.println("Find 14 index: "
+                + new BinarySearch().binarySearch_2(numbers, 14));
+    }
+
 }
