@@ -71,7 +71,12 @@ public class BinarySearch {
         int left = 0;
         int right = numbers.length - 1;
 
+        int times = 0;
+
         while (left <= right) {
+
+            System.out.println("Times: " + ++times);
+
             int mid = left + (right - left) / 2;
 
             int diff = numbers[mid] - target;
@@ -101,8 +106,8 @@ public class BinarySearch {
 //        System.out.println("Find 47 index: "
 //                + new BinarySearch().binarySearch_2(numbers, 47));
 
-        System.out.println("Find 14 index: "
-                + new BinarySearch().binarySearch_2(numbers, 14));
+        System.out.println("Find 3 index: "
+                + new BinarySearch().binarySearch_3(numbers, 3));
     }
 
 }
