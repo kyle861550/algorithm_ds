@@ -1,4 +1,4 @@
-package standard;
+package standard.hash;
 
 public class HashTable<K, V> {
 
