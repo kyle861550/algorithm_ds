@@ -1,18 +1,18 @@
-package standard.sort;
+package standard.sort.N2;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class InsertionSort {
     public void sort(int[] array) {
         int compareTime = 0;
 
         for (int i = 0; i < array.length; i++) {
 
-            for(int j = 0; j < array.length - 1 - i; j++) {
+            for(int j = i; j > 0; j--) {
                 compareTime += 1;
 
-                if(array[j + 1] < array[j]) {
-                    swap(array, j, j + 1);
+                if(array[j] < array[j - 1]) {
+                    swap(array, j, j - 1);
                 }
             }
         }
@@ -30,7 +30,7 @@ public class BubbleSort {
         int[] nonSort = {
                 15, 21 ,20, 2, 15 ,24, 5, 19
         };
-        new BubbleSort().sort(nonSort);
+        new InsertionSort().sort(nonSort);
 
         System.out.println("After sort: " + Arrays.toString(nonSort));
     }

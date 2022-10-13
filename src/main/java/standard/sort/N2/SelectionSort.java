@@ -1,4 +1,4 @@
-package standard.sort;
+package standard.sort.N2;
 
 import java.util.Arrays;
 
