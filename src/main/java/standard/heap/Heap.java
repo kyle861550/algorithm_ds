@@ -99,18 +99,19 @@ public class Heap {
         }
 
 
-        heap.enqueue(3);
-        heap.enqueue(1);
-        System.out.println("Array: " + Arrays.toString(heap.storage));
+//        heap.enqueue(3);
+//        heap.enqueue(1);
+//        heap.dequeue();
+//        System.out.println("Array: " + Arrays.toString(heap.storage));
 
 //        System.out.println("\n\n");
 
-//        for (int j = 1; j < heap.storage.length; j++) {
-//            int top = heap.dequeue();
-//
-//            System.out.println("top: " + top);
-//            System.out.println("Array: " + Arrays.toString(heap.storage));
-//        }
+        for (int j = 1; j < heap.storage.length; j++) {
+            int top = heap.dequeue();
+
+            System.out.println("top: " + top);
+            System.out.println("Array: " + Arrays.toString(heap.storage));
+        }
 
     }
 }
