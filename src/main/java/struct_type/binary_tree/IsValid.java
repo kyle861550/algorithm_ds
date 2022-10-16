@@ -49,8 +49,8 @@ public class IsValid {
         TreeNode treeNode = new TreeNode(10, new TreeNode(2), sub);
 
 
-//        boolean result = checkValid.isValidTree_Problem(treeNode);
-//        System.out.println("Is valid result: " + result);
+        boolean result = isValid.isValidTree_Problem(treeNode);
+        System.out.println("Is valid result: " + result);
 
         // -----------------------------------------------------------------------------------
 

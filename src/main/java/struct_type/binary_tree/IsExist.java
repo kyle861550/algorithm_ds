@@ -33,17 +33,39 @@ public class IsExist {
         return isExist(treeNode.right, target);
     }
 
+    public boolean isExit_traverse(TreeNode treeNode, int target) {
+        TreeNode tmp = treeNode;
+
+        while (tmp != null) {
+            if(tmp.val == target) {
+                return true;
+            }
+
+            if(tmp.val > target) {
+                tmp = tmp.left;
+            } else {
+                tmp = tmp.right;
+            }
+
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         TreeNode baseTreeNode = TreeNode.getBaseTreeNode();
 
         IsExist isExist = new IsExist();
 
 //        boolean result = isExist.isExist(baseTreeNode, 4);
-        boolean result = isExist.isExist_Opt(baseTreeNode, 4);
+//        boolean result = isExist.isExist_Opt(baseTreeNode, 4);
+        boolean result = isExist.isExit_traverse(baseTreeNode, 4);
         System.out.println("Is 4 in tree ? " + result);
 
 //        boolean result2 = isExist.isExist(baseTreeNode, 99);
-        boolean result2 = isExist.isExist_Opt(baseTreeNode, 99);
+//        boolean result2 = isExist.isExist_Opt(baseTreeNode, 99);
+        boolean result2 = isExist.isExit_traverse(baseTreeNode, 99);
         System.out.println("Is 99 in tree ? " + result2);
+
     }
 }

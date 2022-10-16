@@ -12,19 +12,33 @@ public class InsertNode {
         }
 
         if(newVal < root.val) {
-            return insertNode(root.left, newVal);
+            root.left =  insertNode(root.left, newVal);
         }
 
         if(newVal > root.val) {
-            return insertNode(root.right, newVal);
+            root.right = insertNode(root.right, newVal);
         }
 
         return root;
     }
 
+    private void recursivePrint(TreeNode node) {
+        if(node == null) {
+            return;
+        }
+        recursivePrint(node.left);
+        System.out.print(node.val + ", ");
+        recursivePrint(node.right);
+    }
+
     public static void main(String[] args) {
+        TreeNode baseTreeNode = TreeNode.getBaseTreeNode();
 
+        InsertNode t = new InsertNode();
+        t.insertNode(baseTreeNode, 10);
+        t.insertNode(baseTreeNode, 8);
 
+        t.recursivePrint(baseTreeNode);
     }
 
 }
