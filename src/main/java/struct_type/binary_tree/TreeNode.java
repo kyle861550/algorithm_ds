@@ -26,4 +26,14 @@ public class TreeNode {
         return new TreeNode(5, two, six);
     }
 
+    public static void traverse(TreeNode treeNode) {
+        if(treeNode == null) {
+            return;
+        }
+
+        traverse(treeNode.left);
+        System.out.print(treeNode.val + ", ");
+        traverse(treeNode.right);
+    }
+
 }

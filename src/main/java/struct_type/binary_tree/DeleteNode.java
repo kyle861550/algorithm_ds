@@ -46,4 +46,12 @@ public class DeleteNode {
         return node;
     }
 
+    public static void main(String[] args) {
+        TreeNode baseTreeNode = TreeNode.getBaseTreeNode();
+
+        DeleteNode deleteNode = new DeleteNode();
+        TreeNode result = deleteNode.deleteNode(baseTreeNode, 5);
+
+        TreeNode.traverse(result);
+    }
 }
