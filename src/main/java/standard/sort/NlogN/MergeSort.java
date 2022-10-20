@@ -39,12 +39,12 @@ public class MergeSort {
                 array[i] = tmpArray[left];
 
                 left++;
-            } else if(array[left] < array[right]) {
+            } else if(tmpArray[left] < tmpArray[right]) {
                 array[i] = tmpArray[left];
 
                 left++;
 
-            } else if(array[left] > array[right]) {
+            } else if(tmpArray[left] > tmpArray[right]) {
                 array[i] = tmpArray[right];
 
                 right++;
